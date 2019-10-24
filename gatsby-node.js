@@ -13,7 +13,15 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
   }
 }
-
+exports.onCreateBabelConfig = ({ actions }) => {
+  actions.setBabelPlugin({
+    name: 'babel-plugin-import',
+    options: {
+      libraryName: 'antd',
+      style: true
+    }
+  })
+}
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return new Promise((resolve, reject) => {

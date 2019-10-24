@@ -5,9 +5,15 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "antd": "^3.24.2",
+    "babel-plugin-import": "^1.12.2",
+    "customize-cra": "^0.8.0",
     "gatsby": "^2.16.1",
     "gatsby-image": "^2.2.29",
+    "gatsby-plugin-antd": "^2.0.2",
+    "gatsby-plugin-less": "^3.0.12",
     "gatsby-plugin-manifest": "^2.2.23",
+    "gatsby-plugin-netlify-cms": "^4.1.25",
     "gatsby-plugin-offline": "^3.0.16",
     "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-sharp": "^2.2.32",
@@ -15,11 +21,17 @@
     "gatsby-source-filesystem": "^2.1.33",
     "gatsby-transformer-remark": "^2.6.30",
     "gatsby-transformer-sharp": "^2.2.23",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "netlify-cms": "^2.9.7",
+    "netlify-cms-app": "^2.9.7",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
+    "react-app-rewired": "^2.1.4",
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
-    "slug": "^1.1.0"
+    "slug": "^1.1.0",
+    "styled-components": "^4.4.0"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

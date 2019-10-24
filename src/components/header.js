@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from 'styled-components'
 
 const Header = (props) => (
   <div
@@ -12,7 +13,7 @@ const Header = (props) => (
     <div
       style={{
         margin: "0 auto",
-        maxWidth: 960,
+        maxWidth: '80%',
         padding: "1.45rem 1.0875rem"
       }}
     >

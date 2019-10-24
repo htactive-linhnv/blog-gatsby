@@ -5,30 +5,57 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import { graphql } from "gatsby";
+import { Button } from 'antd'
+import styled from 'styled-components'
 
-const IndexPage = (props) => {
+const IndexPage = styled.div`
+  & .image {
+    max-width: 300px;
+    margin-bottom:1.45rem;
+  }
+  & .post--wrapper {
+    border: 1px solid gray;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  & .post--title {
+    color: red;
+    text-decoration: none;
+    font-size: 1.3em;
+  }
+  & .post--content {
+    margin-bottom:20px;
+  }
+`
+
+export default (props) => {
   return (
-
     <Layout>
       <SEO title="Home" />
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
-      {props.data.allMarkdownRemark.edges.map(({ node }, index) =>
-        <div>
-          <Link to={node.fields.slug}>
-            <div>{node.frontmatter.title}</div>
-          </Link>
-          <div>{node.excerpt}</div>
+      <IndexPage>
+        <div className='image'>
+          <Image />
         </div>
-      )}
+        {props.data.allMarkdownRemark.edges.map(({ node }, index) =>
+          <div className='post--wrapper'>
+            <Link className='post--title' to={node.fields.slug}>
+              <div className='post--content' >{node.frontmatter.title}</div>
+            </Link>
+            <div className='post--content' >{node.excerpt}</div>
+            <Button type="Primary">
+              <Link to={node.fields.slug}>
+                Read more
+              </Link>
+            </Button>
+          </div>
+        )}
+      </IndexPage>
+
 
 
     </Layout>
   )
 }
-
-export default IndexPage
 
 export const query = graphql`
   query {
