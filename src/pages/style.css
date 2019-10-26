@@ -1,0 +1,33 @@
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper .image {
+  max-width: 150px;
+  margin: 0 auto;
+  margin-bottom: 1.65rem;
+  margin-top: 40px;
+}
+
+.wrapper .ant-typography {
+  font-size: 2.3em;
+}
+.wrapper .welcome {
+  width: 350px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.wrapper .text {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  font-weight: 500;
+  font-family: Google Sans, georgia, serif;
+  letter-spacing: 0.04rem;
+}
+.wrapper #first-text {
+  margin-top: 80px;
+}

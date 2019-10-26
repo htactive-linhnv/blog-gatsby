@@ -5,45 +5,16 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby";
 import { Typography, Layout } from 'antd';
 import styled from 'styled-components'
+import '../pages/style.css'
 const { Text } = Typography;
 
 const Wrapper = styled.div`
-  width:80%;
-  margin: 0 auto;
-
-  & .image {
-    max-width: 150px;
-    margin: 0 auto
-    margin-bottom:1.65rem;
-    margin-top:40px;
-  }
-
-  & .ant-typography {
-      font-size:2.3em;
-  }
-  & .welcome {
-    width: 350px;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-  }
-  & .text {
-    margin: 0 auto;
-    text-align:center;
-    margin-bottom:15px;
-    font-size:1.4em;
-    font-weight:500;
-    font-family: Google Sans,georgia,serif;
-    letter-spacing: .04rem;
-  }
-  & #first-text {
-    margin-top:80px;
-  }
+ 
 `
 
 export default (props) => {
   return (
-    <Wrapper>
+    <div className="wrapper">
       <Header >
         <SEO title="Home" />
       </Header>
@@ -54,7 +25,7 @@ export default (props) => {
       </div>
       <p className="text">front-end developer @unemployed</p>
       <p className="text">coding | blog | travel </p>
-    </Wrapper>
+    </div>
 
 
   )
