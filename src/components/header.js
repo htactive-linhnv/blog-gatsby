@@ -1,75 +1,49 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import styled from 'styled-components'
+import { Menu, Icon, Typography, Row, Col } from 'antd';
+const { Text } = Typography;
 
 const Header = (props) => (
-  <div
-    style={{
-      background: "rebeccapurple",
-      marginBottom: "1.45rem"
-    }}
-  >
-    <div
-      style={{
-        margin: "0 auto",
-        maxWidth: '80%',
-        padding: "1.45rem 1.0875rem"
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+  <>
+  <Row style={{ width: '100%', margin: '0 auto', marginBottom:"20px",marginTop:"25px" }}>
+    <Col span={12}>
+      <Typography > <span style={ {borderBottom: '1px solid lightgray',paddingBottom: '13px'}}>Linh Nguyễn</span></Typography>
+    </Col>
+    <Col span={12}><Menu mode="horizontal" style={{ textAlign: "right", fontSize: "1.1em", border: "none" }}>
+      <Menu.Item key="home">
+        <Icon type="home" />
         <Link
-          to="/"
           style={{
-            color: "white",
-            textDecoration: "none"
+            display: 'inline-block'
           }}
-        >
-          {props.siteTitle}
-        </Link>
-        <ul style={{ listStyle: "none", float: "right" }}>
-          <li style={{ display: "inline-block", marginRight: "1rem" }}>
-            <Link
-              style={{
-                color: "white",
-                textDecoration: "none",
-                fontSize: "x-large"
-              }}
-              to="/"
-            >
-              Home
-            </Link>
-          </li>
-          <li style={{ display: "inline-block", marginRight: "1rem" }}>
-            <Link
-              style={{
-                color: "white",
-                textDecoration: "none",
-                fontSize: "x-large"
-              }}
-              to="/page-2"
-            >
-              Page 2
-            </Link>
-          </li>
-          <li style={{ display: "inline-block", marginRight: "1rem" }}>
-            <Link
-              style={{
-                color: "white",
-                textDecoration: "none",
-                fontSize: "x-large"
-              }}
-              to="/page-3"
-            >
-              Page 3
-            </Link>
-          </li>
-        </ul>
-      </h1>
-    </div>
-  </div>
+          to="/"
+        >Home </Link>
+      </Menu.Item>
+      <Menu.Item key="blog">
+        <Icon type="read" />
+        <Link
+          style={{
+            display: 'inline-block'
+          }}
+          to="/blog/"
+        >Blog </Link>
+      </Menu.Item>
+      <Menu.Item key="alipay">
+        <Icon type="profile" />
+        <a
+          style={{
+            display: 'inline-block'
+          }}
+          href="https://linhnguyenviet.github.io/"
+        >Resume </a>
+      </Menu.Item>
+    </Menu></Col>
+  </Row>
+  {/* <hr style={{width:"90%",margin:"0 auto"}}></hr> */}
+  </>
 );
- 
+
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }

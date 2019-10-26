@@ -2,6 +2,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import SEO from "../components/seo"
 import Sidebar from './sidebar'
 import Header from "./header"
 import "./layout.css"
@@ -10,8 +11,10 @@ import styled from 'styled-components'
 const Layout = styled.div`
 margin: 0 auto;
 max-width: 80%;
-padding: 0px 1.0875rem 1.45rem;
 padding-top: 0;
+& .ant-typography {
+  font-size:2.3em;
+}
 `
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
@@ -39,23 +42,24 @@ export default ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <Layout>
-        <main style={{
-          display: 'flex',
-          width: '100%'
-        }}>
-          <div className="content">{children}</div>
-          <div className="sidebar"><Sidebar edges={data.topics.edges} /></div>
-        </main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
+    <Layout>
+      <Header>
+        <SEO title="Home" />
+      </Header>
+      <main style={{
+        display: 'flex',
+        width: '100%'
+      }}>
+        <div className="content">{children}</div>
+        <div className="sidebar"><Sidebar edges={data.topics.edges} /></div>
+      </main>
+      <footer>
+        © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </Layout>
-    </>
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </footer>
+    </Layout>
+
   )
 }
 

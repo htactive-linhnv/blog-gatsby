@@ -1,59 +1,62 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
+import Header from "../components/header"
+import Image from "../images/boy.png"
 import SEO from "../components/seo"
 import { graphql } from "gatsby";
-import { Button } from 'antd'
+import { Typography, Layout } from 'antd';
 import styled from 'styled-components'
+const { Text } = Typography;
 
 const IndexPage = styled.div`
+  width:80%;
+  margin: 0 auto;
   & .image {
-    max-width: 300px;
-    margin-bottom:1.45rem;
+    max-width: 150px;
+    margin: 0 auto
+    margin-bottom:1.65rem;
+    margin-top:40px;
+
   }
-  & .post--wrapper {
-    border: 1px solid gray;
-    padding: 30px;
-    margin-bottom: 30px;
+
+  & .ant-typography {
+      font-size:2.3em;
   }
-  & .post--title {
-    color: red;
-    text-decoration: none;
-    font-size: 1.3em;
+  & .welcome {
+    width: 350px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
   }
-  & .post--content {
-    margin-bottom:20px;
+  & .text {
+    margin: 0 auto;
+    text-align:center;
+    margin-bottom:15px;
+    font-size:1.4em;
+    font-weight:500;
+    font-family: Google Sans,georgia,serif;
+    letter-spacing: .04rem;
+  }
+  & #first-text {
+    margin-top:80px;
   }
 `
 
 export default (props) => {
   return (
-    <Layout>
-      <SEO title="Home" />
-      <IndexPage>
-        <div className='image'>
-          <Image />
-        </div>
-        {props.data.allMarkdownRemark.edges.map(({ node }, index) =>
-          <div className='post--wrapper'>
-            <Link className='post--title' to={node.fields.slug}>
-              <div className='post--content' >{node.frontmatter.title}</div>
-            </Link>
-            <div className='post--content' >{node.excerpt}</div>
-            <Button type="Primary">
-              <Link to={node.fields.slug}>
-                Read more
-              </Link>
-            </Button>
-          </div>
-        )}
-      </IndexPage>
+    <IndexPage>
+      <Header >
+        <SEO title="Home" />
+      </Header>
+      <p className="text" id="first-text">hey,i'm</p>
+      <Text className="welcome" code>  Linh </Text>
+      <div className='image'>
+        <img src ={Image}></img>
+      </div>
+      <p className="text">front-end developer @unemployed</p>
+      <p className="text">coding | blog | travel </p>
+    </IndexPage>
 
 
-
-    </Layout>
   )
 }
 

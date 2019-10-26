@@ -1,5 +1,5 @@
 ---
-title: Bài 8
+title: Hành trình trở thành vua  5
 date: "2015-05-06T23:46:37.121Z"
 categories: ["Coding"]
 tags: ["egg", "wiki"]

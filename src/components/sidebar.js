@@ -6,14 +6,18 @@ import styled from 'styled-components'
 
 const slug = require(`slug`);
 const Wrap = styled.div`
-margin-bottom:20px
+  margin-bottom:20px
 `
 const Aside = styled.div`
   margin-left: 25%;
-  border: 1px solid gray;
+  border: 1px solid #e8e8e8;
   padding: 20px 10px 20px 25px;
   position:fixed;
+  top:100px;
   right:13%;
+  border-radius:3px;
+  
+ 
 `
 export default (props) => {
   const { edges } = props;
@@ -29,7 +33,7 @@ export default (props) => {
     <Tag key={index}
       color={'#' + (Math.random() * 0xFFFFFF << 0).toString(16)}>
       <Link to={`/tag/${slug(item).toLowerCase()}/`}>
-        {item}
+        #{item}
       </Link>
       &nbsp;
     </Tag>
@@ -46,11 +50,11 @@ export default (props) => {
   return (
     <Aside>
       <Wrap>
-        <p>Tags</p>
+      <p>Tag</p>
         {tagList}
       </Wrap>
       <Wrap>
-        <p>Categories</p>
+      <p>Categories</p>
         {categoryList}
       </Wrap>
     </Aside>
