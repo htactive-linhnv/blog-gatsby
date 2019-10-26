@@ -7,15 +7,15 @@ import { Typography, Layout } from 'antd';
 import styled from 'styled-components'
 const { Text } = Typography;
 
-const IndexPage = styled.div`
+const Wrapper = styled.div`
   width:80%;
   margin: 0 auto;
+
   & .image {
     max-width: 150px;
     margin: 0 auto
     margin-bottom:1.65rem;
     margin-top:40px;
-
   }
 
   & .ant-typography {
@@ -43,7 +43,7 @@ const IndexPage = styled.div`
 
 export default (props) => {
   return (
-    <IndexPage>
+    <Wrapper>
       <Header >
         <SEO title="Home" />
       </Header>
@@ -54,7 +54,7 @@ export default (props) => {
       </div>
       <p className="text">front-end developer @unemployed</p>
       <p className="text">coding | blog | travel </p>
-    </IndexPage>
+    </Wrapper>
 
 
   )
