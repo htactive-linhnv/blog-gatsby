@@ -1,4 +1,3 @@
-import { paginate } from 'gatsby-awesome-pagination';
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const path = require('path')
 const slug = require(`slug`);
