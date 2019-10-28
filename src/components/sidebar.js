@@ -16,6 +16,9 @@ const Aside = styled.div`
   top:100px;
   right:13%;
   border-radius:3px;
+  @media (max-width:1200px) {
+    
+  }
   
  
 `

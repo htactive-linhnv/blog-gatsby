@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import shelby from '../images/shelby.jpg'
 const IndexPage = styled.div`
  
   & .post--wrapper {
@@ -32,7 +32,7 @@ const IndexPage = styled.div`
     border-radius:3px;
   }
   & .post--image {
-    background-image : url("https://i.pinimg.com/originals/ee/39/05/ee3905d06684aad915c1844633adf12f.jpg");
+    background-image : url("${shelby}");
     width:400px;
     height:300px;
     background-size: contain;
@@ -41,6 +41,8 @@ const IndexPage = styled.div`
     width: 90%;
     margin-left: 5%;
   }
+
+  
 `
 
 export default IndexPage
