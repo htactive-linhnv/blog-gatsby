@@ -23,6 +23,9 @@ padding-top: 0;
     display:none;
     width:0;
   }
+   .ant-typography {
+    font-size:1.5em;
+  }
 }
 `
 Layout.propTypes = {

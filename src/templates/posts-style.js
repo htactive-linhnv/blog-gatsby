@@ -42,6 +42,20 @@ const IndexPage = styled.div`
     margin-left: 5%;
   }
 
+  @media (max-width:678px) {
+    & .post--wrapper {
+      display:block;
+    }
+    & .post--image {
+      width: 100%;
+      display: block;
+      background-size: contain;
+    }
+    & .post--write {
+      width:100%;
+    }
+  }
+
   
 `
 
