@@ -1,5 +1,5 @@
 ---
-title: Hành trình trở thành vua 3
+title: Hanh trinh tro thanh vua 3
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
 categories: ["Coding"]

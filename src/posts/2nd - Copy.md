@@ -1,5 +1,5 @@
 ---
-title: Hành trình trở thành vua 7
+title: Hanh trinh tro thanh vua 7
 date: "2015-05-06T23:46:37.121Z"
 categories: ["Coding"]
 tags: ["egg", "wiki"]

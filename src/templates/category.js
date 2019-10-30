@@ -1,48 +1,19 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import { Link } from "gatsby"
-import { Button, Tag } from 'antd'
 import StyledBlog from '../templates/posts-style'
+import PostLayout from '../templates/PostLayout'
+import SEO from '../components/seo'
 
 export default ({ data, pageContext }) => {
   const { category } = pageContext;
   const posts = data.allMarkdownRemark.edges.filter(item => item.node.frontmatter.categories.includes(category))
   return (
     <Layout>
+       <SEO title="Home" />
       <StyledBlog>
         {posts.map(({ node }, index) =>
-          <div className='post--wrapper'>
-            <div className="post--image">
-
-            </div>
-            <div className="post--write">
-              <Link className='post--category' to={node.fields.slug}>
-                {
-                  node.frontmatter.categories.map((item, index) => {
-                    let colon = index === node.frontmatter.categories.length - 1 ? "" : ", "
-                    return <span className="category" >{item.toUpperCase()}{colon}</span>
-                  }
-                  )}
-                <div className='post--title' >
-                  {node.frontmatter.title}
-
-                </div>
-              </Link>
-              {
-                node.frontmatter.tags.map(item =>
-                  <Tag className='post--content' >#{item}</Tag>
-                )}
-
-              <div className='post--content' >{node.excerpt}</div>
-              <Button type="Primary">
-                <Link to={node.fields.slug}>
-                  Read more
-              </Link>
-              </Button>
-            </div>
-
-          </div>
+          <PostLayout node = {node}/>
         )}
       </StyledBlog>
     </Layout>

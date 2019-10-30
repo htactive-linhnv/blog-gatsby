@@ -53,11 +53,11 @@ export default (props) => {
   return (
     <Aside>
       <Wrap>
-      <p>Tag</p>
+        <p>Tag</p>
         {tagList}
       </Wrap>
       <Wrap>
-      <p>Categories</p>
+        <p>Categories</p>
         {categoryList}
       </Wrap>
     </Aside>

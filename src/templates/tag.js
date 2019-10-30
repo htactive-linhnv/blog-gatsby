@@ -1,76 +1,48 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/layout";
-import { Link } from "gatsby"
-import { Button, Tag } from 'antd'
-import StyledBlog from '../templates/posts-style'
+// import React from "react";
+// import { graphql } from "gatsby";
+// import Layout from "../components/layout";
+// import StyledBlog from '../templates/posts-style'
+// import PostLayout from '../templates/PostLayout'
+// import SEO from '../components/seo'
 
+// export default ({ data, pageContext }) => {
+//   const { tag } = pageContext;
+//   const posts = data.allMarkdownRemark.edges.filter(item => item.node.frontmatter.tags.includes(tag))
+//   return (
+//     <Layout>
+//        <SEO title="Home" />
+//       <StyledBlog>
+//         {posts.map(({ node }, index) =>
+//           <PostLayout node = {node}/>
+//         )}
+//       </StyledBlog>
+//     </Layout>
+//   );
+// };
 
-export default ({ data, pageContext }) => {
-  const { tag } = pageContext;
-  const posts = data.allMarkdownRemark.edges.filter(item => item.node.frontmatter.tags.includes(tag))
+// export const query = graphql`
+// query tagPageQuery($skip: Int!, $limit: Int!){
+//   allMarkdownRemark(
+//       sort: {order: DESC, fields: [frontmatter___date] }
+//       limit: $limit
+//       skip: $skip
+//     ) {
+//     edges {
+//       node {
+//         frontmatter {
+//           title
+//           date(formatString: "DD/MM/YYYY")
+//           tags
+//           categories
+//         }
+//         excerpt(pruneLength: 280)
+//         fields {
+//           slug
+//         }
+//       }
+//     }
+//   }
+// }`
 
-  return (
-    <Layout>
-      <StyledBlog>
-        {posts.map(({ node }, index) =>
-          <div className='post--wrapper'>
-            <div className="post--image">
-
-            </div>
-            <div className="post--write">
-              <Link className='post--category' to={node.fields.slug}>
-                {
-                  node.frontmatter.categories.map((item, index) => {
-                    let colon = index === node.frontmatter.categories.length - 1 ? "" : ", "
-                    return <span className="category" >{item.toUpperCase()}{colon}</span>
-                  }
-                  )}
-                <div className='post--title' >
-                  {node.frontmatter.title}
-
-                </div>
-              </Link>
-              {
-                node.frontmatter.tags.map(item =>
-                  <Tag className='post--content' >#{item}</Tag>
-                )}
-
-              <div className='post--content' >{node.excerpt}</div>
-              <Button type="Primary">
-                <Link to={node.fields.slug}>
-                  Read more
-              </Link>
-              </Button>
-            </div>
-
-          </div>
-        )}
-      </StyledBlog>
-    </Layout>
-  );
-};
-
-export const query = graphql`
-query {
-  allMarkdownRemark(
-      sort: {order: DESC, fields: [frontmatter___date] }
-      
-    ) {
-    edges {
-      node {
-        frontmatter {
-          title
-          date(formatString: "DD/MM/YYYY")
-          tags
-          categories
-        }
-        excerpt 
-        fields {
-          slug
-        }
-      }
-    }
-  }
-}
-`
+import makePostPage from '../templates/makePostPage'
+export default makePostPage(props)

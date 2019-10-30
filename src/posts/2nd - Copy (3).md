@@ -1,5 +1,5 @@
 ---
-title: Hành trình trở thành vua 6
+title: Hanh trinh tro thanh vua 6
 date: "2015-05-06T23:46:37.121Z"
 categories: ["Coding"]
 tags: ["egg", "wiki"]
