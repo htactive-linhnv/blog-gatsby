@@ -5,7 +5,7 @@ import StyledBlog from '../templates/posts-style'
 import PostLayout from '../templates/PostLayout'
 import SEO from '../components/seo'
 import Paginate from '../templates/Paginate'
-import Search from "../components/SearchContainer";
+// import Search from "../components/SearchContainer";
 
 export default (props) => {
     console.log(props,props.pageContext.tag);
@@ -26,7 +26,7 @@ export default (props) => {
     return (
         <Layout>
             <SEO title="Home" />
-            <Search />
+            {/* <Search /> */}
             <StyledBlog>
                 {
                     newPosts.map(({ node }, index) =>
