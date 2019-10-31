@@ -44,22 +44,22 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       const edges = result.data.allMarkdownRemark.edges
-      createPage({
-        path: "/search",
-        component: path.resolve(`./src/templates/ClientSearchTemplate.js`),
-        context: {
-          bookData: {
-            allBooks: edges,
-            options: {
-              indexStrategy: "Prefix match",
-              searchSanitizer: "Lower Case",
-              TitleIndex: true,
-              AuthorIndex: true,
-              SearchByTerm: true,
-            },
-          },
-        },
-      })
+      // createPage({
+      //   path: "/search",
+      //   component: path.resolve(`./src/templates/ClientSearchTemplate.js`),
+      //   context: {
+      //     bookData: {
+      //       allBooks: edges,
+      //       options: {
+      //         indexStrategy: "Prefix match",
+      //         searchSanitizer: "Lower Case",
+      //         TitleIndex: true,
+      //         AuthorIndex: true,
+      //         SearchByTerm: true,
+      //       },
+      //     },
+      //   },
+      // })
       let tags = [];
       let categories = [];
       edges.forEach(({ node }) => {
