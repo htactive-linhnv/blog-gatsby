@@ -2,6 +2,7 @@
 title: Đi quẩy Hà Giang
 date: 2019-10-31T02:13:25.030Z
 description: Test vui thôi
+thumbnail: {'../images/shelby.jpg'}
 tags:
   - greeting
   - hà giang

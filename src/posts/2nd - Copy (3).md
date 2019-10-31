@@ -3,6 +3,8 @@ title: Hanh trinh tro thanh vua 6
 date: "2015-05-06T23:46:37.121Z"
 categories: ["Coding"]
 tags: ["egg", "wiki"]
+thumbnail: {'../images/shelby.jpg'}
+
 ---
 
 Wow! I love blogging so much already.
