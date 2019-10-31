@@ -3,6 +3,7 @@ title: Hanh trinh tro thanh vua 10
 date: "2015-05-28T22:40:32.169Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 categories: ["Coding"]
+thumbnail: /img/16265369_1351773241578273_5787759091518713991_n.jpg
 
 tags: ["greeting"]
 ---

@@ -3,9 +3,11 @@ import { Link } from "gatsby"
 import { Button, Tag } from 'antd'
 const PostLayout = (props) => {
     const { node } = props
+    console.log(node);
+    const bgUrl = 'url(' + node.frontmatter.thumbnail+ ')'
     return (
         <div className='post--wrapper'>
-            <div className="post--image">
+            <div className="post--image" style={{backgroundImage:bgUrl}}>
             </div>
             <div className="post--write">
                 <Link className='post--category' to={node.fields.slug}>

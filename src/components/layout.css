@@ -615,11 +615,13 @@ main {
 }
 
 .sidebar {
-  width: 280px;
+  width: 210px;
 }
-
+.sidebar > div {
+  width: 210px;
+}
 .content {
-  width: calc(100% - 280px);
+  width: calc(100% - 210px);
 }
 @media only screen and (max-width: 480px) {
   html {

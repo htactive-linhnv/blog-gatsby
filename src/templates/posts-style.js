@@ -31,7 +31,6 @@ const IndexPage = styled.div`
   border-radius:3px;
 }
 & .post--image {
-  background-image : url("${shelby}");
   width:400px;
   height:300px;
   background-size: contain;

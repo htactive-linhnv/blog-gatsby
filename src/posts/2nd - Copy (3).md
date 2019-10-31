@@ -3,6 +3,7 @@ title: Hanh trinh tro thanh vua 6
 date: "2015-05-06T23:46:37.121Z"
 categories: ["Coding"]
 tags: ["egg", "wiki"]
+thumbnail: /img/16265369_1351773241578273_5787759091518713991_n.jpg
 
 
 ---

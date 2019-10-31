@@ -53,6 +53,7 @@ query ($skip: Int!, $limit: Int!){
           date(formatString: "DD/MM/YYYY")
           tags
           categories
+          thumbnail
         }
         excerpt(pruneLength: 280)
         fields {

@@ -15,6 +15,11 @@ padding-top: 0;
 & .ant-typography {
   font-size:2.3em;
 }
+
+& .ant-menu-item, .ant-menu-submenu-title {
+  padding: 0 0 0 40px;
+}
+
 @media only screen and (max-width:1200px) {
   .content {
     width:100% !important;

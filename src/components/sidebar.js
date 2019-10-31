@@ -14,8 +14,11 @@ const Aside = styled.div`
   padding: 20px 10px 20px 25px;
   position:fixed;
   top:100px;
-  right:13%;
+  right:10%;
   border-radius:3px;
+  & .ant-tag {
+    margin-bottom:10px;
+  }
   @media (max-width:1200px) {
     
   }
