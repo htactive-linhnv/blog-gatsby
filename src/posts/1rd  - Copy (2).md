@@ -1,9 +1,12 @@
 ---
-title: Hanh trinh tro thanh vua 1
+title: Đi Đà Lat
 date: '2015-05-01T22:12:03.284Z'
-tags: []
-categories: []
 description: Hello World
+tags:
+  - đà lạt
+categories:
+  - Coding
+thumbnail: /img/16265369_1351773241578273_5787759091518713991_n.jpg
 ---
 This is my first post on my new fake blog! How exciting!
 
@@ -19,5 +22,3 @@ Oh, and here's a great quote from this Wikipedia on
 > wrapped in plastic, and vacuum packed. From the salt curing process, the
 > salted duck eggs have a briny aroma, a gelatin-like egg white and a
 > firm-textured, round yolk that is bright orange-red in color.
-
-![Chinese Salty Egg](/img/16265369_1351773241578273_5787759091518713991_n.jpg)
