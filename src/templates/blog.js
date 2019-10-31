@@ -7,6 +7,7 @@
 // import Paginate from '../templates/Paginate'
 // import Search from "../components/SearchContainer";
 import makePostPage from '../templates/makePostPage'
+
 export default makePostPage(props)
 //   const { currentPage, numPages } = props.pageContext
 //   const isFirst = currentPage === 1

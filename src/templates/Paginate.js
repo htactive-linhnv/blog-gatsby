@@ -1,25 +1,39 @@
 import React from 'react';
 import { Link } from 'gatsby'
-const Paginate = (props) => {
-    const {isFirst,isLast,prevPage,nextPage,numPages,currentPage} = props
+import { Button } from 'antd'
+const Paginate =    (props) => {
+    const { isFirst, isLast, prevPage, nextPage, numPages, currentPage, path } = props
     return (
         <>
             {!isFirst && (
-                <Link to={prevPage} rel="prev">
-                    ← Previous Page
+                <Button type='Primary'>
+                    <Link to={prevPage} rel="prev">
+                        ← Previous Page
                 </Link>
+                </Button>
             )}
 
             {Array.from({ length: numPages }, (_, i) => (
-                <Link key={`pagination-number${i + 1}`} to={`blog/${i === 0 ? "" : i + 1}`}>
-                    {" "}{i + 1} {" "}
-                </Link>
+                <Button type='Primary'>
+                    {
+                        i + 1 == currentPage ?
+                            <Link key={`pagination-number${i + 1}`} style={{ color: "blue" }} to={`${path}/${i === 0 ? "" : i + 1}`}>
+                                {" "}{i + 1} {" "}
+                            </Link>
+                            :
+                            <Link key={`pagination-number${i + 1}`} to={`${path}/${i === 0 ? "" : i + 1}`}>
+                                {" "}{i + 1} {" "}
+                            </Link>
+                    }
+                </Button>
             ))}
 
             {!isLast && (
-                <Link to={nextPage} rel="next">
-                    Next Page →
+                <Button type='Primary'>
+                    <Link to={nextPage} rel="next">
+                        Next Page →
                 </Link>
+                </Button>
             )}
         </>
     );

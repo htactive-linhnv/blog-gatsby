@@ -6,11 +6,12 @@ import PostLayout from '../templates/PostLayout'
 import SEO from '../components/seo'
 import Paginate from '../templates/Paginate'
 import Search from "../components/SearchContainer";
+
 export default (props) => {
     console.log(props,props.pageContext.tag);
     
-    const path = props.path.substring(1)
     const { currentPage, numPages } = props.pageContext
+    const path = currentPage>1 ? props.path.substring(1).slice(0,props.path.substring(1).length-1) : props.path.substring(1)
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
     const prevPage = currentPage - 1 === 1 ? path : path + (currentPage - 1).toString()
@@ -20,8 +21,8 @@ export default (props) => {
     if ( path.includes('tag'))  newPosts = posts.filter(item => item.node.frontmatter.tags.includes(props.pageContext.tag))
     else if ( path.includes('category')) newPosts = posts.filter(item => item.node.frontmatter.categories.includes(props.pageContext.category))
     else newPosts = posts
-    console.log(props);
-
+    console.log(path);
+    
     return (
         <Layout>
             <SEO title="Home" />
@@ -32,7 +33,7 @@ export default (props) => {
                         <PostLayout node={node} />
                     )}
                 <Paginate isFirst={isFirst} isLast={isLast} prevPage={prevPage}
-          nextPage={nextPage} currentPage={currentPage} numPages={numPages} />
+          nextPage={nextPage} currentPage={currentPage} numPages={numPages} path={path} />
             </StyledBlog>
         </Layout>
     )

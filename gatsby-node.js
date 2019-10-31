@@ -62,16 +62,13 @@ exports.createPages = ({ graphql, actions }) => {
       })
       let tags = [];
       let categories = [];
-      let tagsLists = []
       edges.forEach(({ node }) => {
         tags = Array.from(new Set([...tags, ...node.frontmatter.tags]));
         categories = Array.from(new Set([...categories, ...node.frontmatter.categories]))
       })
-      
+
       const postsPerPage = 4;
       const numPages = Math.ceil(edges.length / postsPerPage);
-      const numPagesTag = Math.ceil(tags.length / postsPerPage);
-      const numPagesCategory = Math.ceil(categories.length / postsPerPage);
 
       Array.from({ length: numPages }).forEach((_, i) => {
         createPage({
@@ -86,7 +83,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
       });
 
-  
+      
       edges.forEach(({ node }) => {
         createPage({
           path: node.fields.slug,
@@ -98,27 +95,39 @@ exports.createPages = ({ graphql, actions }) => {
       })
 
       tags.forEach((tag) => {
-        createPage({
-          path: `/tag/${slug(tag).toLowerCase()}/`,
-          component: path.resolve(`./src/templates/makePostPage.js`),
-          context: {
-            tag,
-            limit: 100,
-            skip: 0,
-          },
+        let numPagesTag = Math.ceil(edges.filter(item => item.node.frontmatter.tags.indexOf(tag) !== -1).length / postsPerPage);
+        Array.from({ length: numPagesTag }).forEach((_, i) => {
+          createPage({
+            path:  i === 0 ? `/tag/${slug(tag).toLowerCase()}/` : `/tag/${slug(tag).toLowerCase()}/${i+1}`,
+            component: path.resolve(`./src/templates/makePostPage.js`),
+            context: {
+              tag,
+              limit: postsPerPage,
+              skip: i * postsPerPage,
+              numPages: numPagesTag,
+              currentPage: i + 1,
+            },
+          })
         })
+
       })
 
       categories.forEach((category) => {
-        createPage({
-          path: `/category/${slug(category).toLowerCase()}/`,
-          component: path.resolve(`./src/templates/makePostPage.js`),
-          context: {
-            category,
-            limit: 100,
-            skip: 0,
-          },
+        let numPagesCategory = Math.ceil(edges.filter(item => item.node.frontmatter.categories.indexOf(category) !== -1).length / postsPerPage);
+        Array.from({ length: numPagesCategory }).forEach((_, i) => {
+          createPage({
+            path:  i === 0 ? `/category/${slug(category).toLowerCase()}/` : `/category/${slug(category).toLowerCase()}/${i+1}`,
+            component: path.resolve(`./src/templates/makePostPage.js`),
+            context: {
+              category,
+              limit: postsPerPage,
+              skip: i * postsPerPage,
+              numPages: numPagesCategory,
+              currentPage: i + 1,
+            },
+          })
         })
+
       })
 
       resolve()
