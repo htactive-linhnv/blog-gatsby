@@ -1,11 +1,10 @@
-
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import SEO from "../components/seo"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
+import SEO from '../components/seo'
 import Sidebar from './sidebar'
-import Header from "./header"
-import "./layout.css"
+import Header from './header'
+import './layout.css'
 import styled from 'styled-components'
 
 const Layout = styled.div`
@@ -16,10 +15,9 @@ padding-top: 0;
   font-size:2.3em;
 }
 
-& .ant-menu-item, .ant-menu-submenu-title {
-  padding: 0 0 0 40px;
+& #resume {
+  padding: 0 0 0 15px;
 }
-
 @media only screen and (max-width:1200px) {
   .content {
     width:100% !important;
@@ -34,7 +32,7 @@ padding-top: 0;
 }
 `
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default ({ children }) => {
@@ -60,23 +58,22 @@ export default ({ children }) => {
 
   return (
     <Layout>
-      <Header>
-        <SEO title="Home" />
+      <Header data={data.topics.edges}>
+        <SEO title='Home' />
       </Header>
       <main style={{
         display: 'flex',
         width: '100%'
       }}>
-        <div className="content">{children}</div>
-        <div className="sidebar"><Sidebar edges={data.topics.edges} /></div>
+        <div className='content'>{children}</div>
+        <div className='sidebar'><Sidebar edges={data.topics.edges} /></div>
       </main>
       <footer>
         © {new Date().getFullYear()}, Built with
-          {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        {' '}
+        <a href='https://www.gatsbyjs.org'>Gatsby</a>
       </footer>
     </Layout>
 
   )
 }
-

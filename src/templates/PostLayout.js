@@ -1,37 +1,49 @@
 import React from 'react';
 import { Link } from "gatsby"
 import { Button, Tag } from 'antd'
+const slug = require(`slug`);
+
 const PostLayout = (props) => {
     const { node } = props
-    console.log(node);
-    const bgUrl = 'url(' + node.frontmatter.thumbnail+ ')'
+    const bgUrl = `url("${node.frontmatter.thumbnail}")`
     return (
         <div className='post--wrapper'>
-            <div className="post--image" style={{backgroundImage:bgUrl}}>
+            <div className="post--image"
+                style={{ backgroundImage: bgUrl }}>
             </div>
             <div className="post--write">
                 <Link className='post--category' to={node.fields.slug}>
                     {
                         node.frontmatter.categories.map((item, index) => {
                             let colon = index === node.frontmatter.categories.length - 1 ? "" : ", "
-                            return <span key={index} className="category" >{item.toUpperCase()}{colon}</span>
+                            return <Link key={index}
+                                className="category"
+                                to={`/category/${slug(item.replace(/\s+/g, '-').toLowerCase())}`} >
+                                {item.toUpperCase()}{colon}
+                            </Link>
                         }
                         )}
                     <div className='post--title' >
                         {node.frontmatter.title}
-
                     </div>
                 </Link>
                 {
-                    node.frontmatter.tags.map((item,index) =>
-                        <Tag key= {index} className='post--content' >#{item}</Tag>
+                    node.frontmatter.tags.map((item, index) =>
+                        <Tag key={index} className='post--content' >
+                            <Link
+                                to={`/tag/${slug(item.replace(/\s+/g, '-').toLowerCase())}`}>
+                                #{item}
+                            </Link>
+                        </Tag>
                     )}
 
-                <div className='post--content' >{node.excerpt}</div>
+                <div className='post--content' >
+                    {node.excerpt}
+                </div>
                 <Button type="Primary">
                     <Link to={node.fields.slug}>
                         Read more
-          </Link>
+                    </Link>
                 </Button>
             </div>
         </div>

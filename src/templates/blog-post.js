@@ -1,9 +1,9 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/layout";
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
 
 export default (props) => {
-  const post = props.data.markdownRemark;  
+  const post = props.data.markdownRemark
   return (
     <Layout>
       <div >
@@ -11,8 +11,8 @@ export default (props) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query($slug: String) {

@@ -1,8 +1,8 @@
 ---
-title: Hanh trinh tro thanh vua 3
+title: Hanh trinh tro thanh vua  4
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
-categories: ["Coding"]
+categories: ["Chuyện bên lề","Chuyện \"nhạy cảm\""]
 tags: ["greeting", "egg"]
 thumbnail: /img/16265369_1351773241578273_5787759091518713991_n.jpg
 

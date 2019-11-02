@@ -44,24 +44,9 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       const edges = result.data.allMarkdownRemark.edges
-      // createPage({
-      //   path: "/search",
-      //   component: path.resolve(`./src/templates/ClientSearchTemplate.js`),
-      //   context: {
-      //     bookData: {
-      //       allBooks: edges,
-      //       options: {
-      //         indexStrategy: "Prefix match",
-      //         searchSanitizer: "Lower Case",
-      //         TitleIndex: true,
-      //         AuthorIndex: true,
-      //         SearchByTerm: true,
-      //       },
-      //     },
-      //   },
-      // })
       let tags = [];
       let categories = [];
+
       edges.forEach(({ node }) => {
         tags = Array.from(new Set([...tags, ...node.frontmatter.tags]));
         categories = Array.from(new Set([...categories, ...node.frontmatter.categories]))
@@ -83,7 +68,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
       });
 
-      
+
       edges.forEach(({ node }) => {
         createPage({
           path: node.fields.slug,
@@ -98,7 +83,7 @@ exports.createPages = ({ graphql, actions }) => {
         let numPagesTag = Math.ceil(edges.filter(item => item.node.frontmatter.tags.indexOf(tag) !== -1).length / postsPerPage);
         Array.from({ length: numPagesTag }).forEach((_, i) => {
           createPage({
-            path:  i === 0 ? `/tag/${slug(tag).toLowerCase()}/` : `/tag/${slug(tag).toLowerCase()}/${i+1}`,
+            path: i === 0 ? `/tag/${slug(tag).toLowerCase()}/` : `/tag/${slug(tag).toLowerCase()}/${i + 1}`,
             component: path.resolve(`./src/templates/makePostPage.js`),
             context: {
               tag,
@@ -116,7 +101,7 @@ exports.createPages = ({ graphql, actions }) => {
         let numPagesCategory = Math.ceil(edges.filter(item => item.node.frontmatter.categories.indexOf(category) !== -1).length / postsPerPage);
         Array.from({ length: numPagesCategory }).forEach((_, i) => {
           createPage({
-            path:  i === 0 ? `/category/${slug(category).toLowerCase()}/` : `/category/${slug(category).toLowerCase()}/${i+1}`,
+            path: i === 0 ? `/category/${slug(category).toLowerCase()}/` : `/category/${slug(category).toLowerCase()}/${i + 1}`,
             component: path.resolve(`./src/templates/makePostPage.js`),
             context: {
               category,
@@ -134,31 +119,3 @@ exports.createPages = ({ graphql, actions }) => {
     })
   })
 };
-
-    // tags.forEach((item,index) => {
-      //   createPage({
-      //     path:  `/blog/${item.toLowerCase()}`,
-      //     component: path.resolve('./src/templates/blog.js'),
-      //     context: {
-      //       limit: postsPerPage,
-      //       skip: index * postsPerPage,
-      //       numPagesTag,
-      //       currentPage: index+1,
-      //       tag:item
-      //     }
-      //   });
-      // });
-
-      // categories.forEach((item,index) => {
-      //   createPage({
-      //     path:  `/blog/${item.toLowerCase()}`,
-      //     component: path.resolve('./src/templates/blog.js'),
-      //     context: {
-      //       limit: postsPerPage,
-      //       skip: index * postsPerPage,
-      //       numPagesCategory,
-      //       currentPage: index + 1,
-      //       category:item
-      //     }
-      //   });
-      // });

@@ -1,10 +1,11 @@
 ---
-title: Hanh trinh tro thanh vua 2
+title: Hanh trinh tro thanh vua  4
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
-categories: ["Coding"]
+categories: ["Coding","Others"]
 tags: ["greeting", "egg"]
-thumbnail: /img/shelby.jpg
+thumbnail: /img/16265369_1351773241578273_5787759091518713991_n.jpg
+
 
 ---
 
@@ -23,4 +24,4 @@ Oh, and here's a great quote from this Wikipedia on
 > salted duck eggs have a briny aroma, a gelatin-like egg white and a
 > firm-textured, round yolk that is bright orange-red in color.
 
-![Chinese Salty Egg](salty_egg.jpg)
+![Chinese Salty Egg](./salty_egg.jpg)

@@ -12,10 +12,10 @@ const Wrapper = styled.div`
  
 `
 
-export default (props) => {
+export default (props) => {  
   return (
     <div className="wrapper">
-      <Header >
+      <Header data= {props.data.allMarkdownRemark.edges} >
         <SEO title="Home" />
       </Header>
       <p className="text" id="first-text">hey,i'm</p>
@@ -42,6 +42,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD/MM/YYYY")
+            categories
           }
           excerpt 
           fields {
