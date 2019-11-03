@@ -10,13 +10,11 @@ categories:
   - Front-End
 thumbnail: /img/full-time-hiring-8.2015-09-e1440676083937.png
 ---
-
-
-Lập trình Web đang là một lĩnh vực rất hot và chuyển mình liên tục. Trang web ngày nay đã trở nên dynamic và phức tạp hơn vài năm trước rất nhiều. Đặc biệt là sự thay đổi đáng kể của lập trình **Front-End**, khi mà giờ đây nhiệm vụ của anh chàng này không còn chỉ là chia layout với HTML, CSS nữa, mà ngày càng xử lí nhiều logic phức tạp hơn. Những công cụ, thư viện liên tục ra đời, hỗ trợ tận răng, nhưng cũng là áp lực lớn hơn với developer để bắt kịp xu thế.
+Lập trình Web đang là một lĩnh vực rất hot và chuyển mình liên tục. Trang web ngày nay đã trở nên phức tạp hơn vài năm trước rất nhiều. Đặc biệt là sự thay đổi đáng kể của lập trình **Front-end**, khi mà giờ đây nhiệm vụ của anh chàng này không còn chỉ là chia layout với HTML, CSS nữa, mà ngày càng xử lí nhiều logic phức tạp hơn. Những công cụ, thư viện liên tục ra đời, hỗ trợ tận răng, nhưng cũng là áp lực lớn hơn với developer để bắt kịp xu thế.
 
 > _Frontend Development is Dead. Long Live Frontend Engineering!_
 
-Bài viết này, mình xin chia sẻ, phân tích một lộ trình khá nổi tiếng và được nhiều người đi trước áp dụng, đặc biệt tham khảo từ anh Thuận - co-Founder của công ty mình đang thực tập. 
+Bài viết này, mình xin chia sẻ, phân tích một lộ trình khá nổi tiếng và được nhiều người đi trước áp dụng, đặc biệt tham khảo từ anh Thuận, co-Founder của công ty mình đang thực tập. 
 
 ## **Phần 1. Learn the BASICS**
 
@@ -28,7 +26,7 @@ Bài viết này, mình xin chia sẻ, phân tích một lộ trình khá nổi 
 
 **HTML**
 
-HTML là viết tắt của hypertext markup language, một ngôn ngữ đánh dấu siêu văn bản nhằm tạo ra nội dung hiển thị trên trang web. 
+HTML là viết tắt của Hypertext Markup Language, một ngôn ngữ đánh dấu siêu văn bản nhằm tạo ra nội dung hiển thị trên trang web. 
 
 * Ở giai đoạn này, hãy nắm các kiến thức cơ bản như các loại thẻ, cấu trúc một file HTML đơn giản. 
 * Tìm hiểu thêm Semantic HTML, một tính năng mới của HTML5.
@@ -40,7 +38,7 @@ HTML là viết tắt của hypertext markup language, một ngôn ngữ đánh 
 CSS là viết tắt của Cascading Style Sheets, một ngôn ngữ tạo ra với mục đích định dạng cho các phần từ HTML. CSS sẽ gọi đến các thẻ HTML và thêm style cho nó để tạo nên trang web có bố cục hài hòa, tránh làm mù mắt người xem. 
 
 * Học cách sử dụng các selector, khái niệm cascading, các thuộc tính cơ bản.
-*  Sau đó hãy luyện tập chia Layout theo một vài trang web mẫu, tìm hiểu nâng cao Flexbox, Grid để viêc làm CSS không còn là một nỗi đau.
+* Sau đó hãy luyện tập chia Layout theo một vài trang web mẫu, tìm hiểu nâng cao Flexbox, Grid để viêc làm CSS không còn là một nỗi đau.
 * Cách sử dụng media queries để đảm bảo trang web của bạn **responsive** ( hiển thị tốt trên mọi thiết bị ) 
 * Một số tính năng mới của CSS3 để tạo các animations.
 
@@ -64,7 +62,7 @@ Trước đây JS tạo ra chủ yếu để thêm các hiệu ứng động cho
 
 **How Internet Works**
 
-Bởi vì Front-end Developer không còn chỉ là HTML,CSS, và JS để tạo hiệu ứng động nữa, mà sẽ phải xử lí thêm về phía logic hơn, nên lập trình viên cần phải hiểu rõ cách hoạt động của một trang web, để tránh tình trạng "râu ông nọ chắp cằm bà kia" với đội ngũ Back-end, và cũng góp phần giúp tiến xa hơn trong sự nghiêp . 
+Bởi vì Front-end Developer không còn chỉ là HTML,CSS, và JS để tạo hiệu ứng động nữa, mà sẽ phải xử lí thêm về phía logic hơn, nên lập trình viên cần phải hiểu rõ cách hoạt động của một trang web, để tránh tình trạng "râu ông nọ chắp cằm bà kia" với team Back-end, và cũng góp phần giúp developer tiến xa hơn trong sự nghiêp . 
 
 Bạn sẽ cần biết : 
 
@@ -77,14 +75,9 @@ Bạn sẽ cần biết :
 
 Điều quan trọng là hãy luyện tập. Việc thử làm những project cá nhân nhỏ sẽ giúp bạn có động lực khi học lập trình, và giúp bạn hiểu rõ hơn cách áp dụng những thứ mình học được. Mình có một số gợi ý ( mà mình đã từng làm lúc trước):
 
-Clone lại giao diện một trang web bạn thấy yêu thích, facebook, mp3, instagram,..
-
-Tạo một ứng dụng To do List
-
-Tạo một đồng hồ đếm ngược.
-
-Tạo một trang online portfolio cho cá nhân.
-
-
+* Clone lại giao diện một trang web bạn thấy yêu thích, facebook, mp3, instagram,..
+* Tạo một ứng dụng To do List
+* Tạo một đồng hồ đếm ngược.
+* Tạo một trang online portfolio cho cá nhân.
 
 Chúc các bạn thành công, và hẹn gặp các bạn ở phần 2, với những kiến thức nâng cao hơn.
