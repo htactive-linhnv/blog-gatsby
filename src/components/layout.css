@@ -621,8 +621,33 @@ main {
 .content {
   width: calc(100% - 210px);
 }
+.layout {
+  margin: 0 auto;
+  max-width: 80%;
+  padding-top: 0;
+}
+.layout .ant-typography {
+  font-size:2.3em;
+}
+
+.layout #resume {
+  padding: 0 0 0 15px;
+}
+@media only screen and (max-width:1200px) {
+  .content {
+    width:100% !important;
+  }
+  .sidebar {
+    display:none;
+    width:0;
+  }
+   .ant-typography {
+    font-size:1.5em;
+  }
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
   }
 }
+

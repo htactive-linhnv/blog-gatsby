@@ -5,37 +5,10 @@ import SEO from '../components/seo'
 import Sidebar from './sidebar'
 import Header from './header'
 import './layout.css'
-import styled from 'styled-components'
 
-const Layout = styled.div`
-margin: 0 auto;
-max-width: 80%;
-padding-top: 0;
-& .ant-typography {
-  font-size:2.3em;
-}
 
-& #resume {
-  padding: 0 0 0 15px;
-}
-@media only screen and (max-width:1200px) {
-  .content {
-    width:100% !important;
-  }
-  .sidebar {
-    display:none;
-    width:0;
-  }
-   .ant-typography {
-    font-size:1.5em;
-  }
-}
-`
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
-}
 
-export default ({ children }) => {
+ const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -57,7 +30,7 @@ export default ({ children }) => {
   `)
 
   return (
-    <Layout>
+    <div className='layout'>
       <Header data={data.topics.edges}>
         <SEO title='Home' />
       </Header>
@@ -73,7 +46,11 @@ export default ({ children }) => {
         {' '}
         <a href='https://www.gatsbyjs.org'>Gatsby</a>
       </footer>
-    </Layout>
+    </div>
 
   )
 }
+Layout.propTypes = {
+  children: PropTypes.node.isRequired
+}
+export default Layout
