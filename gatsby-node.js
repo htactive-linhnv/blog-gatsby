@@ -58,7 +58,7 @@ exports.createPages = ({ graphql, actions }) => {
       Array.from({ length: numPages }).forEach((_, i) => {
         createPage({
           path: i === 0 ? `/blog/` : `/blog/${i + 1}`,
-          component: path.resolve('./src/templates/makePostPage.js'),
+          component: path.resolve('./src/pages/makePostPage.js'),
           context: {
             limit: postsPerPage,
             skip: i * postsPerPage,
@@ -84,7 +84,7 @@ exports.createPages = ({ graphql, actions }) => {
         Array.from({ length: numPagesTag }).forEach((_, i) => {
           createPage({
             path: i === 0 ? `/tag/${slug(tag).toLowerCase()}/` : `/tag/${slug(tag).toLowerCase()}/${i + 1}`,
-            component: path.resolve(`./src/templates/makePostPage.js`),
+            component: path.resolve(`./src/pages/makePostPage.js`),
             context: {
               tag,
               limit: postsPerPage,
@@ -102,7 +102,7 @@ exports.createPages = ({ graphql, actions }) => {
         Array.from({ length: numPagesCategory }).forEach((_, i) => {
           createPage({
             path: i === 0 ? `/category/${slug(category).toLowerCase()}/` : `/category/${slug(category).toLowerCase()}/${i + 1}`,
-            component: path.resolve(`./src/templates/makePostPage.js`),
+            component: path.resolve(`./src/pages/makePostPage.js`),
             context: {
               category,
               limit: postsPerPage,
