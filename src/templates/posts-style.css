@@ -11,7 +11,7 @@
   font-size: 2.3em;
   margin-bottom:0;
 }
-.StyledBlog .category {
+ .category {
     color:#62adf7;
     font-size:0.45em;
     letter-spacing: .07rem;
@@ -19,7 +19,8 @@
 }
 .StyledBlog .post--content {
   margin-bottom:20px;
-  letter-spacing: .017rem;
+  letter-spacing: .01rem;
+  font-family: "Noto Sans",sans-serif;
 }
 .StyledBlog .post-category {
   padding:3px 10px;
@@ -27,7 +28,7 @@
   margin-bottom:10px;
   border-radius:3px;
 }
-.StyledBlog .post--image {
+.post--image {
   width:400px;
   height:300px;
   background-size: contain;
@@ -46,7 +47,7 @@
     display: block;
     background-size: contain;
   }
-  .StyledBlog .post--write {
+  .post--write {
     width:100%;
   }
 }

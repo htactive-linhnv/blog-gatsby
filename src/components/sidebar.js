@@ -3,17 +3,16 @@ import './sidebar.css'
 import { Link } from 'gatsby'
 import { Tag } from 'antd'
 import styled from 'styled-components'
-
 const slug = require('slug')
 const Wrap = styled.div`
   margin-bottom:20px
 `
 const Aside = styled.div`
   margin-left: 25%;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #f1f1f1;
   padding: 20px 10px 20px 25px;
   position:fixed;
-  top:100px;
+  top:140px;
   right:10%;
   border-radius:3px;
   & .ant-tag {

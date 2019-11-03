@@ -43,7 +43,7 @@ export default (props) => {
 
   return (
     <React.Fragment>
-      <Row style={{ width: '100%', margin: '0 auto', marginBottom: '20px', marginTop: '25px' }}>
+      <Row style={{ width: '100%', margin: '0 auto', marginBottom: '60px', marginTop: '25px' }}>
         <Col span={7}>
           <Typography > <span style={{ borderBottom: '1px solid lightgray', paddingBottom: '13px' }}>Linh Nguyễn</span></Typography>
         </Col>

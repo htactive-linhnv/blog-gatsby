@@ -16,7 +16,7 @@ Lập trình Web đang là một lĩnh vực rất hot và chuyển mình liên 
 
 Bài viết này, mình xin chia sẻ, phân tích một lộ trình khá nổi tiếng và được nhiều người đi trước áp dụng, đặc biệt tham khảo từ anh Thuận, co-Founder của công ty mình đang thực tập. 
 
-## **Phần 1. Learn the BASICS**
+***Phần 1. Learn the BASICS***
 
 ![basic](/img/1_1artgychzkzlotvvoj4qiq.png)
 
