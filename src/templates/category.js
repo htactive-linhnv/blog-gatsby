@@ -1,4 +1,4 @@
-import makePostPage from '../templates/makePostPage'
+import makePostPage from '../pages/makePostPage'
 export default makePostPage(props)
 // import React from "react";
 // import { graphql } from "gatsby";

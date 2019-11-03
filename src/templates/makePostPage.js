@@ -1,10 +1,10 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/layout";
-import StyledBlog from '../templates/posts-style'
-import PostLayout from '../templates/PostLayout'
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import  './posts-style.css'
+import PostLayout from './PostLayout'
 import SEO from '../components/seo'
-import Paginate from '../templates/Paginate'
+import Paginate from './Paginate'
 
 export default (props) => {
   const { path, pageContext, data, } = props
@@ -18,11 +18,11 @@ export default (props) => {
   if (pagePath.includes('tag')) newPosts = data.tagList.edges
   else if (pagePath.includes('category')) newPosts = data.categoryList.edges
   else newPosts = data.blogList.edges
-
+  
   return (
     <Layout>
-      <SEO title="Home" />
-      <StyledBlog>
+      <SEO title='Home' />
+      <div className='StyledBlog'>
         {
           newPosts.map(({ node }, index) =>
             <PostLayout node={node} />
@@ -32,7 +32,7 @@ export default (props) => {
           prevPage={prevPage} nextPage={nextPage}
           currentPage={currentPage} numPages={numPages}
           path={pagePath} />
-      </StyledBlog>
+      </div>
     </Layout>
   )
 }

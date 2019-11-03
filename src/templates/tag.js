@@ -1,2 +1,2 @@
-import makePostPage from '../templates/makePostPage'
+import makePostPage from './makePostPage'
 export default makePostPage(props)
