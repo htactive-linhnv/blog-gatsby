@@ -24,8 +24,8 @@ collections:
       - { label: "Featured Image",name: "thumbnail",widget: "image"}
       - { label: "Body", name: "body", widget: "markdown" }
   
-  - name: "blog"
-    label: "Blog"
+  - name: "blog2"
+    label: "Blog việt"
     folder: "src/posts"
     filter: {field: "language", value: "vi"}
     create: true
