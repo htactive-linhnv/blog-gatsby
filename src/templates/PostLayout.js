@@ -4,10 +4,12 @@ import { Button, Tag } from 'antd'
 const slug = require(`slug`);
 
 const PostLayout = (props) => {
-    const { node } = props
+    const { node,nextPost,prevPost } = props
+    console.log(props,"??????");
+    
     const bgUrl = `url("${node.frontmatter.thumbnail}")`
     return (
-        <div className='post--wrapper'>
+        <div className='post--wrapper'>'
             <div className="post--image"
                 style={{ backgroundImage: bgUrl }}>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
-import  './posts-style.css'
+import './posts-style.css'
 import PostLayout from './PostLayout'
 import SEO from '../components/seo'
 import Paginate from './Paginate'
@@ -18,14 +18,13 @@ export default (props) => {
   if (pagePath.includes('tag')) newPosts = data.tagList.edges
   else if (pagePath.includes('category')) newPosts = data.categoryList.edges
   else newPosts = data.blogList.edges
-  
+
   return (
     <Layout>
       <SEO title='Home' />
       <div className='StyledBlog'>
         {
-          newPosts.map(({ node }, index) =>
-            <PostLayout node={node} />
+          newPosts.map((item, index) =>  <PostLayout key={index} node={item.node}  />
           )}
         <Paginate
           isFirst={isFirst} isLast={isLast}
@@ -126,8 +125,16 @@ query ($skip: Int!, $limit: Int!, $tag: String, $category:String){
       edges {
         node {
           frontmatter {
+            title
+            date(formatString: "DD/MM/YYYY")
+            tags
             categories
+            thumbnail
           }
+          excerpt(pruneLength: 280)
+          fields {
+            slug
+          }  
           }
           
         }

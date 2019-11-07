@@ -20,7 +20,7 @@ export default (props) => {
     )
   }
 
-  const createCategoryMenus = (name,items) => {
+  const createCategoryMenus = (name, items) => {
     return (
       <SubMenu
         title={
@@ -36,9 +36,9 @@ export default (props) => {
 
   }
   const codingMenuItems = createMenuItems(codingList)
-  const sideMenuItems  = createMenuItems(sideList)
-  const codingMenu = createCategoryMenus("Coding",codingMenuItems)
-  const sideMenu = createCategoryMenus("Chuyện bên lề",sideMenuItems)
+  const sideMenuItems = createMenuItems(sideList)
+  const codingMenu = createCategoryMenus("Coding", codingMenuItems)
+  const sideMenu = createCategoryMenus("Chuyện bên lề", sideMenuItems)
 
 
   return (
