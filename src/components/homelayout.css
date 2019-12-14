@@ -1,0 +1,42 @@
+body {
+    color:white;
+}
+code {
+    color:white;
+    border-color: white;
+}
+.layout {
+    max-width:100%;
+}
+.ant-row,.ant-row ul,.ant-menu-horizontal > .ant-menu-item > a {
+    background:#FAC921;
+    color:white;
+}
+.ant-row .logo {
+    color:white;
+    border-bottom:none!important;
+}
+.menu__wrapper .ant-col {
+    padding: 13px 6% ;
+}
+.ant-row ul li a {
+    font-size:1.1em;
+    font-weight:500;
+}
+.content {
+    width:100%;
+    margin: 0 auto;
+}
+.ant-typography code {
+    margin: 0 0.2em;
+    padding: 0.2em 0.7em 0.2em;
+    font-size: 85%;
+    background: rgba(0, 0, 0, 0.06);
+    border: 1px solid white;
+    border-radius: 3px;
+    /* color: #FAC921; */
+    display:none;
+}
+.wrapper {
+    width:100%!important;
+}

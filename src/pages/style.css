@@ -7,7 +7,6 @@
   max-width: 130px;
   margin: 0 auto;
   margin-bottom: 1.65rem;
-  margin-top: 40px;
 }
 
 .wrapper .ant-typography {
@@ -31,5 +30,11 @@
 .wrapper #first-text {
   margin-top: 80px;
 }
-
+/* Modified - Text */
+.text--yellow {
+  color:#FAC921;
+}
+.text--lightbold {
+  font-weight:600;
+}
 
